@@ -1,4 +1,5 @@
 from dyn.tm.session import DynectSession
+from dyn.tm.records import TXTRecord
 import os
 
 # Login DynDNS
@@ -7,17 +8,17 @@ def login_dyndns():
     username = os.environ.get('username')
     password = os.environ.get('password')
 
-    my_session = DynectSession(customer, username, password)
+    DynectSession(customer, username, password)
 
 # Delete TXT record
 def delete_txtrecord():
 
-    zone = os.environ.get('zone')
-    fqdn = os.environ.get('fqdn')
+    zone = os.environ.get('CERTBOT_ZONE')
+    fqdn = os.environ.get('CERTBOT__FQDN')
     txtdata = os.environ.get('CERTBOT_VALIDATION')
-    ttl = os.environ.get('ttl')
+    ttl = os.environ.get('CERTBOT_TTL')
     
-    classdyn.tm.records.TXTRecord(zone, fqdn, txtdata, ttl, delete=True)
+    TXTRecord(zone, fqdn, txtdata, ttl, delete=True)
 
 login_dyndns()
 delete_txtrecord()
