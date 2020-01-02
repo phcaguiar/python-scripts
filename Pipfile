@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+azure-identity = "*"
+azure = "*"
+dyn = "*"
+dyndns = "*"
+azure-devops = "*"
+slack = "*"
+slackclient = "*"
+dnspython = "*"
+pylint = "*"
+
+[dev-packages]
+pytest = "*"
+pylint = "*"
+
+[requires]
+python_version = "3.6"
