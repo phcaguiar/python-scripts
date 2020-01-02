@@ -7,3 +7,4 @@ slack==0.0.2
 slackclient==2.5.0
 dnspython==1.16.0
 pylint==2.4.4
+azure-keyvault-certificates==4.0.0b7
